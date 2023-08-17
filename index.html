@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="crud m-5 w-75 m-auto">
+      <h1 class="my-5 text-center text-primary">Product Management System</h1>
+      <label class="fw-bold mb-1" for="productName">Product Name</label>
+      <input oninput="validationProductName()" id="productName" class="form-control mb-2" type="text"/>
+      <label class="fw-bold mb-1" for="productPrice">Product Price</label>
+      <input id="productPrice" class="form-control mb-2" type="number"/>
+      <label class="fw-bold mb-1" for="productCategory">Product Category</label>
+      <input id="productCategory" class="form-control mb-2" type="text"  />
+      <label class="fw-bold mb-1" for="productDesc">Product Desc</label>
+      <textarea
+        id="productDesc"
+        class="form-control mb-2"
+        type="text"
+      ></textarea>
+      <div class="w-100 text-center">
+        <button id="addbtn" class="btn btn-primary w-25 mt-3">
+          Add Product
+        </button>
+        <button id="updatebtn" class="btn btn-primary w-25 mt-3 d-none">
+          Update Product
+        </button>
+      </div>
+      <div class="w-75 m-auto py-3">
+        <input
+          onkeyup="search(searchValue.value)"
+          id="searchValue"
+          class="form-control"
+          type="text"
+          placeholder="Search by name"
+        />
+      </div>
+
+      <table class="table mt-5 table-striped">
+        <thead>
+          <th>Index</th>
+          <th>Products Name</th>
+          <th>Product Price</th>
+          <th>Product Category</th>
+          <th>Product Desc</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="body"></tbody>
+      </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Script2.js"></script>
+  </body>
+</html>
